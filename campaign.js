@@ -28,7 +28,7 @@
   const view=document.createElement('div');view.className='campaign-view';
   photo.before(runway);runway.append(view);view.append(photo);
   photo.classList.remove('reveal','is-visible');
-  image.src='assets/p10-01.jpg';image.width=986;image.height=1085;image.loading='eager';
+  image.src='p10-01.jpg';image.width=986;image.height=1085;image.loading='eager';
   image.alt='Фотография из раздела «Информационная кампания»';
   section.classList.add('campaign-spotlight');
   const arrows=[];
