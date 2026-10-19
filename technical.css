@@ -1,0 +1,26 @@
+.technical-sequence{height:420svh;min-height:0;padding:0}
+.technical-sequence .technical-stage{position:sticky;top:0;height:100svh;display:grid;grid-template-columns:1.08fr 1fr;align-items:center;gap:5vw;padding:40px var(--space);overflow:hidden;isolation:isolate;background:#000}
+.technical-sequence .technical-heading{display:block;position:relative;z-index:2;justify-self:start;width:100%;will-change:opacity,transform}
+.technical-sequence .technical-heading .index{padding:0;margin-bottom:30px}
+.technical-sequence .technical-heading h2{font-size:clamp(40px,5.3vw,90px);line-height:1.04;letter-spacing:-.06em}
+.technical-sequence .technical-heading .reveal,.technical-sequence .technical-grid .reveal{opacity:1;translate:none;filter:none;transition:none}
+.technical-sequence .technical-grid{position:relative;display:block;width:100%;height:74svh;margin:0;overflow:hidden;contain:layout paint}
+.technical-sequence .technical-grid figure{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;width:100%;margin:0;rotate:none;transform:none;will-change:transform,opacity}
+.technical-sequence .technical-grid img{width:88%;height:78%;object-fit:contain;rotate:var(--technical-tilt,-5deg)}
+.technical-sequence .technical-grid figure:nth-child(even) img{--technical-tilt:5deg}
+@media(max-width:800px){
+  .technical-sequence .technical-stage{grid-template-columns:1.12fr 1fr;gap:12px;padding-inline:var(--space)}
+  .technical-sequence .technical-heading .index{margin-bottom:22px;font-size:12px}
+  .technical-sequence .technical-heading h2{font-size:clamp(20px,5.5vw,42px);letter-spacing:-.065em}
+  .technical-sequence .technical-grid{height:64svh}
+  .technical-sequence .technical-grid img{width:90%;height:86%}
+}
+@media(prefers-reduced-motion:reduce){
+  .technical-sequence{height:auto;padding:110px var(--space)}
+  .technical-sequence .technical-stage{position:relative;height:auto;display:block;padding:0;overflow:visible}
+  .technical-sequence .technical-heading{opacity:1!important;transform:none!important}
+  .technical-sequence .technical-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;height:auto;overflow:visible;margin-top:70px;contain:none}
+  .technical-sequence .technical-grid figure{position:relative;opacity:1!important;transform:none!important}
+  .technical-sequence .technical-grid img{width:100%;height:auto;rotate:none}
+}
+@media(max-width:800px) and (prefers-reduced-motion:reduce){.technical-sequence .technical-grid{grid-template-columns:1fr 1fr}}

@@ -1,0 +1,14 @@
+.campaign.campaign-spotlight{display:block;position:relative;z-index:3;min-height:0;padding:100px 0 0}
+.campaign-spotlight .campaign-heading{margin:0 var(--space) 70px}
+.campaign-runway{position:relative;height:220svh}
+.campaign-view{position:sticky;top:0;height:100svh;display:grid;place-items:center;overflow:hidden;isolation:isolate;background:#000}
+.campaign-spotlight .campaign-image{position:relative;z-index:1;width:min(76vw,74svh);height:82svh;max-width:760px;max-height:1050px;margin:0;overflow:hidden;will-change:transform}
+.campaign-spotlight .campaign-image img{width:100%;height:100%;object-fit:cover;object-position:43% 50%;opacity:0;scale:.92;transition:opacity .65s ease,scale .8s cubic-bezier(.16,1,.3,1)}
+.campaign-view.is-revealed .campaign-image img{opacity:1;scale:1}
+.campaign-arrow{position:absolute;z-index:2;pointer-events:none;will-change:translate,rotate;transform-origin:center}
+.campaign-arrow svg{display:block;width:100%;height:auto;fill:#f00;opacity:0}
+.campaign-view.is-revealed .campaign-arrow svg{animation:campaign-pulse 2s ease-in-out infinite}
+.campaign-spotlight+.finale{margin-top:-100svh}
+@keyframes campaign-pulse{0%,100%{opacity:1}50%{opacity:.22}}
+@media(max-width:800px){.campaign.campaign-spotlight{padding-top:100px}.campaign-spotlight .campaign-heading{margin-bottom:55px}}
+@media(prefers-reduced-motion:reduce){.campaign-runway{height:auto}.campaign-view{position:relative}.campaign-spotlight .campaign-image{transform:none!important}.campaign-spotlight .campaign-image img{opacity:1;scale:1}.campaign-view .campaign-arrow svg{animation:none!important;opacity:1}.campaign-spotlight+.finale{margin-top:0}}

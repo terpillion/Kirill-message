@@ -1,0 +1,9 @@
+node_modules/
+qa/
+__pycache__/
+*.zip
+*.log
+.DS_Store
+Thumbs.db
+.env
+.env.*
